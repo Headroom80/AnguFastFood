@@ -1,0 +1,19 @@
+<div class="order-items">
+  <mat-card *ngFor="let item of orderItems" class="order-item">
+    <mat-card-header>
+      <mat-card-title>{{ item.name }}</mat-card-title>
+      <mat-card-subtitle>Prix unitaire: {{ item.price | currency }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Description: {{ item.description }}</p>
+      <div class="quantity-control">
+        Quantité:
+        <input type="number" min="1" [(ngModel)]="item.quantity" (change)="updateQuantity(item.id, item.quantity)">
+      </div>
+      <p>Prix total: {{ item.price * item.quantity | currency }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="removeFromOrder(item.id)">Supprimer</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

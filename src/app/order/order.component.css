@@ -1,0 +1,71 @@
+*{
+  font-family: 'Bebas Neue', sans-serif;
+
+}
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+.menu-card {
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  background-color: #A35829;
+  color: #FFE0C2;
+  font-size: 1.3em;
+}
+
+&:hover {
+  transform: translateY(-5px);
+}
+
+.mat-card-image {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.mat-card-content,
+.mat-card-actions {
+  background-color: #fffbe6;
+  font-size: 1.5em;
+  padding-top: 5px;
+}
+.mat-mdc-card-content {
+  display: block;
+  padding: 0 16px;
+  font-size: 1.5em;
+  padding-top: 5px;
+}
+
+
+.mat-card-title {
+  color: #d23f2b;
+  font-size: 2em;
+}
+.mat-mdc-card-title, .mat-mdc-card-subtitle {
+  display: block;
+  margin: 0;
+  font-size: 1.7em;
+}
+.mat-mdc-button .mat-mdc-button-touch-target, .mat-mdc-unelevated-button .mat-mdc-button-touch-target, .mat-mdc-raised-button .mat-mdc-button-touch-target, .mat-mdc-outlined-button .mat-mdc-button-touch-target {
+  position: absolute;
+  top: 50%;
+  height: 48px;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+button {
+  background-color: #d23f2b;
+  color: white;
+  &:hover {
+    background-color: darken(#d23f2b, 10%);
+  }
+}

@@ -1,0 +1,16 @@
+<div class="menu-list">
+  <mat-card *ngFor="let menu of menuItems" class="menu-card">
+    <mat-card-header>
+      <mat-card-title>{{ menu.category }}: {{ menu.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="assets/images/{{menu.imageUrl}}" alt="{{ menu.name }}">
+    <mat-card-content>
+      <p>{{ menu.description }}</p>
+      <p>{{ menu.price | currency }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="addToOrder(menu)">Ajouter à la commande</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
